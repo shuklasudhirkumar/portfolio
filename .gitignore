@@ -35,6 +35,8 @@ build/
 # Ignore build files and IDE settings
 /target
 /.idea
+/src/main/resources/application.properties
+.gitignore
 
 # Logs
 *.log
