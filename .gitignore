@@ -6,6 +6,8 @@ target/
 # Ignore Spring Boot properties
 application.properties
 application.yml
+# Sensitive configs
+.env
 
 
 ### STS ###
