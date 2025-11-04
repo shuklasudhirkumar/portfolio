@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         // ✅ explicitly allow your React dev server
-                        .allowedOrigins("http://localhost:5173")
+                        .allowedOrigins("https://sudhirkumarshukla.vercel.app","http://localhost:5173")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
