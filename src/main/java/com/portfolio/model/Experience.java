@@ -1,28 +1,28 @@
 package com.portfolio.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.List;
 
 @Entity
-@Table(name = "experiences")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Experience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String year;
+    private String role;
+    private String company;
+    private String period;
+
+    @Column(columnDefinition = "TEXT")
+    private String description;
 
     @ElementCollection
-    @CollectionTable(
-            name = "work_experiences",
-            joinColumns = @JoinColumn(name = "experience_id")
-    )
-    private List<WorkExperience> works;
+    private List<String> skills;
 }

@@ -33,8 +33,14 @@ public class ExperienceServiceImpl implements ExperienceService {
     @Override
     public Experience updateExperience(Long id, Experience updatedExperience) {
         Experience experience = getExperienceById(id);
-        experience.setYear(updatedExperience.getYear());
-        experience.setWorks(updatedExperience.getWorks());
+
+        // Update fields
+        experience.setRole(updatedExperience.getRole());
+        experience.setCompany(updatedExperience.getCompany());
+        experience.setPeriod(updatedExperience.getPeriod());
+        experience.setDescription(updatedExperience.getDescription());
+        experience.setSkills(updatedExperience.getSkills());
+
         return experienceRepository.save(experience);
     }
 
